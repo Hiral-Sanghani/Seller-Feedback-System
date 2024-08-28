@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "sellerFeedbacks")
+@Table(name = "seller_feedback")
 public class Feedback {
 
     @Id
@@ -24,5 +24,5 @@ public class Feedback {
     int rating;
 
     @Column(name = "review_text")
-    String Review;
+    String review;
 }
