@@ -15,14 +15,14 @@ public class Feedback {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    private Long id;
 
     @Column(name = "seller_name")
-    String sellerName;
+    private String sellerName;
 
     @Column(name = "rating")
-    int rating;
+    private int rating;
 
     @Column(name = "review_text")
-    String review;
+    private String review;
 }
