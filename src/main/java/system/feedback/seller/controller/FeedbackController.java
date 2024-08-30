@@ -4,17 +4,16 @@ package system.feedback.seller.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import system.feedback.seller.model.Feedback;
 import system.feedback.seller.service.FeedbackService;
-import system.feedback.seller.service.FeedbackServiceImpl;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000") 
 @RequestMapping("/api")
 public class FeedbackController {
 
@@ -30,7 +29,7 @@ public class FeedbackController {
     }
 
     @PostMapping("/feedback")
-    public ResponseEntity createFeedback(@RequestBody Feedback feedback) {
+    public ResponseEntity<?> createFeedback(@RequestBody Feedback feedback) {
         log.info("Request for creating feedback:  {}", feedback);
         return feedbackService.createFeedback(feedback);
     }
