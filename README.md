@@ -41,7 +41,7 @@ A web application that allows users to view a list of sellers, add feedback, and
 
 **Authentication**
   1. Login
-     - **Endpoint**: /api/login
+     - **Endpoint**: /api/authenticate
      - **Method**: POST
      - **Request Body**:
           >{
